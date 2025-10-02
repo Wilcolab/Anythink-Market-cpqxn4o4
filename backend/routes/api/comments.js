@@ -1,3 +1,4 @@
+
 /**
  * @module routes/api/comments
  * @description Express router for handling comment-related API endpoints.
@@ -16,8 +17,8 @@
     * @summary Delete a comment by its ID.
     * @route DELETE /api/comments/{id}
     * @param {string} id.path.required - The ID of the comment to delete
-    * @returns {Object} 200 - Success message
-    * @returns {Object} 404 - Error message if comment not found
+    * @returns {Object} 200 - Success message if comment is deleted
+    * @returns {Object} 404 - Error message if comment is not found
     * @returns {Object} 500 - Error message if deletion fails
     */
 const router = require("express").Router();
