@@ -33,6 +33,9 @@ function calculate(operand1, operand2, operation) {
         case '/':
             uri += "?operation=divide";
             break;
+        case '^':
+            uri += "?operation=power";
+            break;
         default:
             setError();
             return;
@@ -133,6 +136,7 @@ function equalPressed() {
 }
 
 // TODO: Add key press logics
+
 document.addEventListener('keypress', (event) => {
     if (event.key.match(/^\d+$/)) {
         numberPressed(event.key);
