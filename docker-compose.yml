@@ -1,24 +1,14 @@
 version: '3.8'
 
 services:
-  python-server:
-    build:
-      context: ./python-server
-      dockerfile: Dockerfile
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./python-server:/app
-    environment:
-      - PYTHONPATH=/app
-
   js-express-server:
     build:
       context: ./js-express-server
       dockerfile: Dockerfile
     ports:
-      - "8001:8001"
+      - "8000:8000"
     volumes:
       - ./js-express-server:/app
     environment:
       - NODE_ENV=development
+      - PORT=8000
