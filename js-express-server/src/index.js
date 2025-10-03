@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 });
 
 // Get all tasks
+
 app.get('/tasks', (req, res) => {
     res.json({ tasks: tasks });
 });
